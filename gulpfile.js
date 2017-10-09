@@ -32,7 +32,7 @@ gulp.task('styles', function() {
 
 // Concatenate & Minify JS
 gulp.task('scripts', function() {
-    return gulp.src(['js/images-loaded.js', 'js/isotope.js', 'js/slick.js',  'js/scripts.js'])
+    return gulp.src(['js/wow.js', 'js/slick.js', 'js/scripts.js'])
         .pipe(concat('all.js'))
         .pipe(gulp.dest('dist'))
         .pipe(rename('all.min.js'))

@@ -1,11 +1,72 @@
-h1, h2, h3, h4, h5, h6 {
-	
-}
-
-p{
-}
 
 html,body {
-   
+	margin: 0px;
+	padding: 0px;
+   	a{
+   		text-decoration: none;
+   	}
+   	h1, h2, h3, h4, h5, h6 {
+   		letter-spacing: 0.1em;
+	}
 
+	p{
+		color: $text;
+		font-family: $paragraph;
+		em {
+			font-family: $pItalic;
+		}
+		strong{
+			font-family: $pBold;
+		}
+		a {
+			color: $lightBlue;
+		}
+	}
 }
+
+//image alignment in text
+img.alignright { float: right; margin: 0 0 1em 1em; }
+img.alignleft { float: left; margin: 0 1em 1em 0; }
+img.aligncenter { display: block; margin-left: auto; margin-right: auto; }
+.alignright { float: right; }
+.alignleft { float: left; }
+.aligncenter { display: block; margin-left: auto; margin-right: auto; }
+
+
+//color classes
+.blue {
+	background-color: $blue;
+}
+.purple {
+	background-color: $purple;
+}
+.yellow {
+	background-color: $yellow;
+}
+.green {
+	background-color: $green;
+}
+.gallery br {
+    display: none
+}
+
+//buttons
+button {
+	a {
+		font-family: $header;
+		color: $kidsContent;
+		font-size: 3.5em;
+		text-shadow: 1.5px 1.5px 0 #333, 0px 1.5px 0 #333, -1.5px -1.5px 0 #333, -1.5px -1.5px 0 #333, -1.5px 1.5px 0 #333, 1.5px -1.5px 0 #333, 0.77782px 0.77782px 0 #aaaaaa, 1.55563px 1.55563px 0 #aaaaaa, 2.33345px 2.33345px 0 #aaaaaa, 3.11127px 3.11127px 0 #aaaaaa, 3.88909px 3.88909px 0 #aaaaaa, 4.6669px 4.6669px 0 #aaaaaa, 5.44472px 5.44472px 0 #aaaaaa, 6.22254px 6.22254px 0 #aaaaaa, 7.00036px 7.00036px 0 #aaaaaa, 7.77817px 7.77817px 0 #aaaaaa;
+		&:hover {
+			text-shadow: 1.5px 1.5px 0 #cac6c5, -1.5px -1.5px 0 #cac6c5, -1.5px -1.5px 0 #cac6c5, -1.5px 1.5px 0 #cac6c5, 1.5px -1.5px 0 #cac6c5;
+			color: $kidsContent;
+		}
+	}
+	
+	border: none;
+}
+
+
+
+
+

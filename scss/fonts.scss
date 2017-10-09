@@ -1,0 +1,61 @@
+@font-face {
+    font-family: 'cabinbold';
+    src: url('../assets/fonts/cabin-bold-webfont.woff2') format('woff2'),
+         url('../assets/fonts/cabin-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'cabinitalic';
+    src: url('../assets/fonts/cabin-italic-webfont.woff2') format('woff2'),
+         url('../assets/fonts/cabin-italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'cabinmedium';
+    src: url('../assets/fonts/cabin-medium-webfont.woff2') format('woff2'),
+         url('../assets/fonts/cabin-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'cabinmedium_italic';
+    src: url('../assets/fonts/cabin-mediumitalic-webfont.woff2') format('woff2'),
+         url('../assets/fonts/cabin-mediumitalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'cabinregular';
+    src: url('../assets/fonts/cabin-regular-webfont.woff2') format('woff2'),
+         url('../assets/fonts/cabin-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'bebasregular';
+    src: url('../assets/fonts/bebas___-webfont.woff2') format('woff2'),
+         url('../assets/fonts/bebas___-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'francois_oneregular';
+    src: url('../assets/fonts/francoisone-webfont.woff2') format('woff2'),
+         url('../assets/fonts/francoisone-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+$header: 'francois_oneregular';
+$block: 'bebasregular';
+$paragraph: 'cabinregular';
+$pItalic: 'cabinitalic';
+$pBold: 'cabinbold';

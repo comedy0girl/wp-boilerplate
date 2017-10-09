@@ -1,0 +1,17 @@
+.kids-page {
+	background-image: url('../assets/img/kids-bg.jpg');
+	padding: 5em;
+	.kids-content {
+		padding: 2em;
+		background-color: white;
+	
+		
+
+		.gallery-item {
+			float: left;
+			&:hover {
+				opacity: 0.5;
+			}
+		}
+	}
+}

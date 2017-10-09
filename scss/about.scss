@@ -1,0 +1,20 @@
+.about-content {
+	
+	padding: 2em;
+	.about-wrapper-bg {
+		.about-inner {
+			background-color: white;
+			padding: 1em;
+		}
+		p {
+		padding: 0 1em;
+			span.img-shader {
+				img {
+					padding: 4em;
+					max-width: 100%;
+
+				}
+			}
+		}
+	}
+}

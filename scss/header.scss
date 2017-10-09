@@ -1,0 +1,24 @@
+.logo-wrapper {
+	float: left;
+	margin-left: 2em;
+	display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100%;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-top: 5em;
+    z-index: 5;
+    position: relative;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(50, 50, 50, 0.35);
+	-moz-box-shadow: 10px 10px 5px 0px rgba(50, 50, 50, 0.35);
+	box-shadow: 10px 10px 5px 0px rgba(50, 50, 50, 0.35);
+	transform: skewY(-2deg);
+  	transform-origin: top right;
+}
+
+
