@@ -1,6 +1,6 @@
 
 
-<?php get_header(); 
+<?php get_header(); lcoal
     /* Template Name: Home Page*/
 ?>
 
@@ -11,56 +11,66 @@
 	  	</div>
 
 	  	<div class="twelve columns content main-content">
+	  		<!-- <div class="cloud">
+				<img src="<?php bloginfo('template_url') ?>/assets/img/cloud.png">
+			</div> -->
+
 	    	<div class="hello-banner" style="background-image: url('<?php bloginfo('template_url') ?>/assets/img/sweets-bg.jpg')">
 				<div class="offset-by-one ten columns welcome-inner">
-		    		<div class="one-half column intro-blurb wow fadeInLeft "><?php 
-		    			if ( have_posts() ) : 
-			                while ( have_posts() ) : 
-			                        the_post(); 
-			                             the_content(); 
-			                 endwhile; else : ?>
-			                  <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
-			            <?php endif; ?>
-		    		</div>
+		    		  <!-- <div class="one-half column wow fadeInRight ">
+		                <div class="julius-hello">
+		                    <img  src="<?php bloginfo('template_url') ?>/assets/img/lil-jules.png">
+		                </div>
+		            </div> -->
 
-					<div class="one-half column wow fadeInRight brands-wrapper"><?php
-						$my_id = 1257;
-						$post_id_1257 = get_post($my_id);
-						$content = $post_id_1257->post_content;
-						$content = apply_filters('the_content', $content);
-						$content = str_replace(']]>', ']]>', $content); ?>
-						<div class="brands"><?php
-							echo $content; ?>
-		    			</div>
+					<div class="twelve columns wow fadeInRight brands-wrapper"><?php 
+						$images = get_field('logos');
+
+						if( $images ): ?>
+						    <ul>
+						        <?php foreach( $images as $image ): ?>
+						            <li class="logo-img">
+						                <a href="<?php echo $image['url']; ?>">
+						                     <img src="<?php echo $image['sizes']['medium']; ?>" alt="<?php echo $image['alt']; ?>" />
+						                </a>
+						                <p><?php echo $image['caption']; ?></p>
+						            </li>
+						        <?php endforeach; ?>
+						    </ul>
+						<?php endif; ?>
 		    		</div>
 
 	    		</div>
 	    	</div>
 		</div>
 
-		<div class="twelve columns kids-teens">
-			<div class="one-half column left"><?php
-				$my_id = 1322;
-				$post_id_1322 = get_post($my_id);
-				$content = $post_id_1322->post_content;
-				$content = apply_filters('the_content', $content);
-				$content = str_replace(']]>', ']]>', $content);
-				echo $content; ?>
-			</div>
-				
+		<div class="twelve columns kids-teens"><?php
+			if(have_rows('bottom_images')) :
 
-			<div class="one-half column right"><?php
-				$my_id = 1324;
-				$post_id_1324 = get_post($my_id);
-				$content = $post_id_1324->post_content;
-				$content = apply_filters('the_content', $content);
-				$content = str_replace(']]>', ']]>', $content);
-				echo $content; ?>
-			</div>
+	        	while( have_rows('bottom_images') ): the_row();  
+		            $imageL = get_sub_field('left_image');
+		            $imageR = get_sub_field('right_image'); ?>
+
+
+					<div class="one-half column left">
+						 <img src="<?php echo $imageL; ?>" />
+					</div>
+						
+
+					<div class="one-half column right">
+						 <img src="<?php echo $imageR; ?>" />
+					</div><?php 
+
+	      		endwhile; 
+
+    		endif; ?>
 
 			<div class="go-tos">
-				<button class="kidsbtn"><a href="/">Kids</a></button>
-				<button class="teenbtn"><a href="/">Teens</a></button>
+				<li><button class="kidsbtn"><a href="/">Kids</a></button></li>
+				<li><button class="teenbtn"><a href="/">Teens</a></button></li>
+				<li><button class="ladiesbtn"><a href="/">Ladies</a></button></li>
+				<li><button class="guysbtn"><a href="/">Mens</a></button></li>
+
 			</div> 
 			
 		</div>

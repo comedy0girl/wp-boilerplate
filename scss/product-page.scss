@@ -1,0 +1,34 @@
+.the-products {
+	&:nth-child(even){
+		.the-image{
+			float: left;
+		}
+		.blurbs {
+			float: right;
+		}
+	}
+	&:nth-child(odd) {
+		.the-image {
+			float: right;
+		}
+		.blurbs {
+			float: left;
+		}
+	}
+	height: 400px;
+	.the-image {
+		margin: 0px;
+		padding: 0px;
+		float: left;
+		
+		img {
+			max-width: 100%;
+			
+		}
+	}
+
+	.blurbs {
+		font-family: $paragraph;
+		font-size: 1.5em;
+	}
+}

@@ -1,6 +1,6 @@
 <?php
 
-    /* Template Name: About Page */
+    /* Template Name: Product Page */
  
 get_header(); ?>
 
@@ -22,15 +22,35 @@ get_header(); ?>
     	</div>
     </div>
 
-    <div class="row twelve columns contact-us">
+   <!--  <div class="row twelve columns contact-us">
         <div class="contact-wrapper">
             <?php echo do_shortcode('[contact-form-7 id="1400" title="Contact form 1"]'); ?>
             <span class="gradient"></span>
         </div>
-    </div>
+    </div> -->
 
-</div>
+</div><?php
+    
+    if(have_rows('image-and-blurb')) :
+
+        while( have_rows('image-and-blurb') ): the_row();  
+            $image = get_sub_field('image');
+            $blurb = get_sub_field('blurb'); ?>
+        <div class="row twelve columns the-products">
+            <div class="one-half column the-image">
+                <img src="<?php echo $image; ?>" />
+            </div>
+
+            <div class="one-half blurbs">
+                <p><?php
+                    echo $blurb; ?>
+                </p>
+            </div>
+        </div><?php 
+        endwhile; 
+
+    endif; ?>
+     
+
 
 <?php get_footer(); ?>
- 
-

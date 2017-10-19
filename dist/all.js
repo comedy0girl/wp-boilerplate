@@ -3527,12 +3527,12 @@ $(document).ready(function(){
     }
   });
 
-    var img='';
-      $('img').each(function(){
+    // var img='';
+    //   $('img').each(function(){
         
-          $(this).wrap('<div class="image-and-bg-wrapper"><span class="img-shader"></span></div>');
+    //       $(this).wrap('<div class="image-and-bg-wrapper"><span class="img-shader"></span></div>');
         
-      });
+    //   });
 
 
     $('.slick-slider').slick({

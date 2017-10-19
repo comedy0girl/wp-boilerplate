@@ -1,9 +1,7 @@
 <?php include (TEMPLATEPATH . '/template-parts/_wrapper.php'); ?>
 
 <header class="header" role="banner">
-	<!-- <div class="cloud">
-		<img src="<?php bloginfo('template_url') ?>/assets/img/cloud.png">
-	</div>  -->
+	
      <div class="row top-banner">
         <div class="navigation"> <?php 
             wp_nav_menu(['theme_location' => 'header-menu' ]); ?>

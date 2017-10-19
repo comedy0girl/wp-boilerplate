@@ -36,16 +36,6 @@
 	    ) );
 	}
 
-
-// function masonry_scripts() {
-// 	wp_enqueue_script( 'masonry', get_template_directory_uri() . '/js/masonry.pkgd.min.js', array('images-loaded'), '1.0.0', true );
-//     wp_enqueue_script( 'images-loaded', get_template_directory_uri() . '/js/imagesloaded.pkgd.min.js', array('jquery'), '1.0.0', true );
-// }
-// add_action( 'wp_enqueue_scripts', 'masonry_scripts' );
-
-
-
-
 	add_filter( 'use_default_gallery_style', '__return_false' );
 
 		function adjust_image_sizes_attr( $sizes, $size ) {
